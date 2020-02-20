@@ -58,9 +58,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+var newsum=sum(a,b)[0];
+var newsum2=sum(newsum,c)[0];
 
+var newmull=multiply(a,b)[0];
+var newmull2=multiply(newmull,c)[0];
+
+
+
+var massage3=`${a} and ${b} and ${c} sum to ${newsum2}.`;
+
+var massage4=`The product of ${a} and ${b} and ${c} is ${newmull2}.`;
+
+return [newsum2, newmull2, massage3, massage4];
 }
-
+console.log(testSumAndMultiply());
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
